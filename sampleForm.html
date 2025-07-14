@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form </title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .field-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151;
+        }
+        .required {
+            color: #ef4444;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        .submit-btn {
+            background-color: #2F5FA7;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .clear-btn {
+            background-color: transparent;
+            color: #2F5FA7;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #2F5FA7;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-left: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Sample Form </h1>
+        <p>Sample testing form.</p>
+        
+        <form>
+            
+            <div class="field-group">
+                <label for="fullName">Full name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter full name here">
+            </div>
+            <div class="field-group">
+                <label for="email">Email:<span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="button" class="clear-btn">Clear</button>
+        </form>
+    </div>
+</body>
+</html>
